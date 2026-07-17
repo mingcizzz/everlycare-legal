@@ -1,195 +1,100 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EverlyCare Privacy Policy</title>
 <style>
-  *{box-sizing:border-box} body{margin:0;background:#f6f7f6;color:#1f2937;
-    font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
-    font-size:16px;line-height:1.75}
-  .wrap{max-width:760px;margin:0 auto;background:#fff;padding:48px 40px 64px}
-  .brand{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#065F46;
-    border-bottom:2px solid #065F46;padding-bottom:10px;margin-bottom:28px;font-weight:600}
-  h1{font-size:26px;color:#064E3B;margin:26px 0 12px} h2{font-size:19px;color:#065F46;margin:26px 0 10px}
-  a{color:#047857} ul{padding-left:24px} li{margin:5px 0}
-  hr{border:none;border-top:1px solid #d1d5db;margin:36px 0}
-  strong{color:#111827}
-  @media(max-width:600px){.wrap{padding:32px 20px 48px}}
-</style></head><body><div class="wrap"><div class="brand">EverlyCare</div>
-<h1 id="everlycare-privacy-policy">EverlyCare Privacy Policy</h1>
-<p><strong>Effective Date: July 15, 2026</strong> (supersedes the version dated July 8, 2026)</p>
-<p>EverlyCare ("we", "our", "the app") is developed by Mingchi Zhang. This privacy policy explains how we collect, use, and protect your personal information when you use the EverlyCare mobile application. This policy is provided in English and Chinese; both versions are intended to be identical, and in case of any discrepancy the English version prevails.</p>
-<h2 id="1-information-we-collect">1. Information We Collect</h2>
-<p>We collect the following types of information:</p>
-<ul>
-<li><strong>Account Information:</strong> Email address, display name, language preference, and an optional profile photo when you create and use an account.</li>
-<li><strong>Care Recipient Data:</strong> Information you enter about the person you are caring for — name, date of birth, gender, your relationship to them, medical conditions, allergies, care notes, an optional profile photo, and care-routine preferences such as their usual sleep window and quick water-logging presets.</li>
-<li><strong>Care Logs:</strong> Daily care records you enter, including:
-<ul>
-<li>toileting records (planned or spontaneous visits, incontinence episodes, volume, time seated, outdoor mode);</li>
-<li>bowel movement records (type, Bristol scale rating, amount, accidents, location);</li>
-<li>meal and fluid-intake records (meal type, description, fluid amount in ml, appetite);</li>
-<li>medication records (medication name, dosage, taken/missed/skipped) and medication schedules;</li>
-<li>mood and behavior observations (including sleep quality notes);</li>
-<li>hygiene records (bathing, clothing changes, skin condition, oral care);</li>
-<li>activity records and free-form care notes;</li>
-<li>reminder schedules you configure.</li>
-</ul></li>
-<li><strong>Consent Records:</strong> When you agree to this policy at registration, and when you confirm proxy consent while creating a care recipient profile, we store an audit record of that consent (who agreed, when, which consent type, and which policy version). These records are append-only and cannot be edited.</li>
-<li><strong>Location Data (optional):</strong> If you enable the weather-aware prediction feature and grant location permission, the app reads your device's approximate coordinates to fetch local weather. See Section 4. If you decline the permission, the feature is simply skipped.</li>
-<li><strong>Device Information:</strong> Device type, operating system version, and language preference, used only for app functionality.</li>
-</ul>
-<h2 id="2-how-we-use-your-information">2. How We Use Your Information</h2>
-<ul>
-<li>To provide and maintain the app's caregiving features</li>
-<li>To generate care insights, trend analysis, and pattern-based predictions (such as likely toileting windows) for your personal caregiving use — see Section 6</li>
-<li>To send local notification reminders you have configured</li>
-<li>To enable care team collaboration with family members you invite</li>
-<li>To generate PDF care reports for sharing with healthcare providers</li>
-<li>To compute internal, aggregated usage statistics (for example, how many households log in a given week) so we can improve the app. These statistics are derived from logging activity, are not shared with anyone outside EverlyCare, and do not involve any third-party analytics SDK.</li>
-</ul>
-<h2 id="3-data-storage-and-security">3. Data Storage and Security</h2>
-<p>Your data is stored securely using Supabase, a cloud database service with enterprise-grade security. All data is transmitted over HTTPS encryption. Row-level security policies ensure that only you and your invited care team members can access your care data.</p>
+  :root{--fg:#1e293b;--muted:#64748b;--accent:#0d9488;--line:#e2e8f0;--bg:#ffffff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);background:#f8fafc;line-height:1.65}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px;background:var(--bg)}
+  .langnav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:8px;font-size:14px}
+  .langnav a{color:var(--accent);text-decoration:none;margin-right:16px;font-weight:600}
+  h1{font-size:26px;margin:24px 0 4px}
+  h2{font-size:18px;margin:28px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+  .eff{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .intro{margin:0 0 8px}
+  p{margin:10px 0}
+  ul{margin:8px 0;padding-left:22px}
+  li{margin:6px 0}
+  li ul{margin:6px 0}
+  .divider{margin:56px 0;border:0;border-top:2px solid var(--line)}
+  footer{color:var(--muted);font-size:13px;margin-top:48px;text-align:center}
+  @media (prefers-color-scheme:dark){
+    body{background:#0b1220;color:#e2e8f0}.wrap{background:#0f172a}
+    :root{--fg:#e2e8f0;--muted:#94a3b8;--line:#1e293b;--bg:#0f172a}
+    .langnav{background:#0f172a}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="langnav"><a href="#en">English</a><a href="#zh">中文</a></nav>
+  <div id="en"><h1>EverlyCare Privacy Policy</h1>
+<p class="eff">Effective Date: July 17, 2026 (supersedes the version dated July 15, 2026)</p>
+<p class="intro">EverlyCare ("we", "our", "the app") is developed by Mingchi Zhang. This privacy policy explains how we collect, use, and protect your personal information when you use the EverlyCare mobile application. This policy is provided in English and Chinese; both versions are intended to be identical, and in case of any discrepancy the English version prevails.</p>
+<section><h2>1. Information We Collect</h2><p>We collect the following types of information:</p>
+<ul><li>Account Information: Email address, display name, language preference, and an optional profile photo when you create and use an account.</li><li>Care Recipient Data: Information you enter about the person you are caring for — name, date of birth, gender, your relationship to them, medical conditions, allergies, care notes, an optional profile photo, and care-routine preferences such as their usual sleep window and quick water-logging presets.</li><li>Care Logs: Daily care records you enter, including:<ul><li>toileting records (planned or spontaneous visits, incontinence episodes, volume, time seated, outdoor mode);</li><li>bowel movement records (type, Bristol scale rating, amount, accidents, location);</li><li>meal and fluid-intake records (meal type, description, fluid amount in ml, appetite);</li><li>medication records (medication name, dosage, taken/missed/skipped) and medication schedules;</li><li>mood and behavior observations (including sleep quality notes);</li><li>hygiene records (bathing, clothing changes, skin condition, oral care);</li><li>activity records and free-form care notes;</li><li>reminder schedules you configure.</li></ul></li><li>Consent Records: When you agree to this policy at registration, and when you confirm proxy consent while creating a care recipient profile, we store an audit record of that consent (who agreed, when, which consent type, and which policy version). These records are append-only and cannot be edited.</li><li>Location Data (optional): If you enable the weather-aware prediction feature and grant location permission, the app reads your device's approximate coordinates to fetch local weather. See Section 4. If you decline the permission, the feature is simply skipped.</li><li>Apple Health Data (optional, iOS): If you enable Health Data reading in Settings and grant permission, the app reads (never writes) two data types from Apple Health — sleep analysis and step count — to refine toileting predictions. Raw health samples never leave your device; only derived results are stored (see Section 5). This feature is off by default, and declining the permission simply skips it.</li><li>Device Information: Device type, operating system version, and language preference, used only for app functionality.</li></ul></section>
+<section><h2>2. How We Use Your Information</h2><ul><li>To provide and maintain the app's caregiving features</li><li>To generate care insights, trend analysis, and pattern-based predictions (such as likely toileting windows) for your personal caregiving use — see Section 6</li><li>To send local notification reminders you have configured</li><li>To enable care team collaboration with family members you invite</li><li>To generate PDF care reports for sharing with healthcare providers</li><li>To compute internal, aggregated usage statistics (for example, how many households log in a given week) so we can improve the app. These statistics are derived from logging activity, are not shared with anyone outside EverlyCare, and do not involve any third-party analytics SDK.</li></ul></section>
+<section><h2>3. Data Storage and Security</h2><p>Your data is stored securely using Supabase, a cloud database service with enterprise-grade security. All data is transmitted over HTTPS encryption. Row-level security policies ensure that only you and your invited care team members can access your care data.</p>
 <p>Some data is also stored locally on your device only: your login session, a short-lived weather cache, and prediction records used to measure prediction accuracy on-device. On iOS, if you use the home-screen widget, the day's care summary and the current prediction are shared with the widget through Apple's protected App Group container on your device; quick logging on the widget uses your login credential to write the records you actively tap into your own account.</p>
-<p>If you use the app in mainland China, your care data is kept only on your device and is not uploaded to the cloud infrastructure above (see Section 10). Because this on-device data is not backed up to our servers, we recommend exporting a PDF report before switching devices or reinstalling the app.</p>
-<h2 id="4-data-sharing-and-third-party-services">4. Data Sharing and Third-Party Services</h2>
-<p>We do <strong>not</strong> sell or trade your personal data, do not use it for advertising, and do not use any third-party analytics or crash-reporting SDKs. Your care data is only visible to:</p>
-<ul>
-<li>You (the account holder)</li>
-<li>Care team members you explicitly invite</li>
-</ul>
+<p>If you use the app in mainland China, your care data is kept only on your device and is not uploaded to the cloud infrastructure above (see Section 10). Because this on-device data is not backed up to our servers, we recommend exporting a PDF report before switching devices or reinstalling the app.</p></section>
+<section><h2>4. Data Sharing and Third-Party Services</h2><p>We do not sell or trade your personal data, do not use it for advertising, and do not use any third-party analytics or crash-reporting SDKs. Your care data is only visible to:</p>
+<ul><li>You (the account holder)</li><li>Care team members you explicitly invite</li></ul>
 <p>The app relies on the following service providers:</p>
-<ul>
-<li><strong>Supabase</strong> (database, authentication, and hosting infrastructure): processes and stores the data described in Section 1 on our behalf.</li>
-<li><strong>Open-Meteo</strong> (weather service, optional): if you grant location permission, your device sends its approximate coordinates directly to the Open-Meteo weather API to retrieve local temperature and humidity, which the app uses to refine toileting predictions. No account information, name, or care data is sent with this request, and the result is cached on your device. If you never grant location permission, no data is ever sent to Open-Meteo.</li>
-</ul>
-<p>No other third party receives your data.</p>
-<h2 id="5-health-data">5. Health Data</h2>
-<p>EverlyCare collects health-related information about care recipients (medication, toileting and bowel habits, fluid intake, mood, hygiene, etc.). This data is treated with the highest level of sensitivity. Apart from Supabase acting as our hosting infrastructure, we do not disclose health data to any third party, and it is only accessible to authenticated users with explicit access.</p>
-<h2 id="6-pattern-insights-and-predictions">6. Pattern Insights and Predictions</h2>
-<p>The app analyzes the care logs you enter to surface patterns — for example, typical toileting intervals, hydration trends, or likely upcoming toileting windows (optionally adjusted for the care recipient's sleep window and local weather). These insights are wellness and caregiving aids intended to help you plan daily care. They are <strong>not medical advice, diagnosis, or treatment</strong>, and should never replace the judgment of a qualified healthcare professional. Predictions are computed within the app for your care team's use; prediction accuracy is evaluated locally on your device.</p>
-<h2 id="7-consent-and-proxy-consent">7. Consent and Proxy Consent</h2>
-<ul>
-<li><strong>Your consent:</strong> Creating an account requires you to read and accept this privacy policy. You may withdraw consent at any time by stopping use of the app and/or deleting your account (Section 9).</li>
-<li><strong>Proxy consent:</strong> When you create a care recipient profile, you confirm that you are entitled to record care and health information on behalf of that person — for example, as their family caregiver where the person may lack the capacity to consent themselves. You must not enter information about a person you are not entitled to record for. If a care recipient (or their legal representative) objects, the responsible caregiver should delete the relevant data.</li>
-<li><strong>Consent records:</strong> Each of these consent events is stored as a versioned, append-only audit record so that both you and we can verify what was agreed and when. You can view your own consent history data via your account; these records are deleted together with your account.</li>
-</ul>
-<h2 id="8-push-notifications">8. Push Notifications</h2>
-<p>Reminders (toileting, medication, fluids, custom) are delivered as <strong>local notifications scheduled on your device</strong>. We do not use remote push services and do not collect push tokens. Notification content is generated on your device from the reminders you configured. You can disable notifications at any time in your device settings or in the app.</p>
-<h2 id="9-data-retention-and-deletion">9. Data Retention and Deletion</h2>
-<p><strong>Retention.</strong> Your data is retained for as long as your account is active. Local caches (weather, prediction records) remain only on your device and are removed when you uninstall the app.</p>
-<p><strong>Deleting individual records.</strong> You can edit or delete individual care logs you created at any time in the app.</p>
-<p><strong>Deleting your account.</strong> You can delete your account yourself at any time in the app (Settings → Delete Account). Deletion takes effect immediately and works as follows:</p>
-<ul>
-<li>Care recipient profiles that you created and that <strong>no other accepted care team member</strong> shares with you are permanently deleted, together with all of their care logs, reminders, and medication records.</li>
-<li>Care recipient profiles that are <strong>shared with other accepted care team members</strong> are retained, because they contain the shared family record of that person's care. In that case, care logs you authored are retained for the remaining care team, but your authorship is removed (the logs are no longer linked to you), and the profile is no longer linked to your account.</li>
-<li>Your account, profile, care team memberships, and consent records are permanently deleted.</li>
-</ul>
-<p>If you have questions about deletion, or wish to request removal of data in a shared care record, contact us at the address in Section 14.</p>
-<h2 id="10-international-data-transfer">10. International Data Transfer</h2>
-<p>Your data is hosted on Supabase cloud infrastructure, which may be located outside your country of residence (including in the United States). By using the app, you acknowledge that your information will be processed on this infrastructure, protected by the measures described in Section 3. If you use the app in mainland China, your care data — including all health-related information (logs, medications, and care-recipient profiles and conditions), care-team data, and consent records — is stored only on your device and is not transferred outside mainland China. Only account-level information (your email and display name) is processed on the cloud infrastructure above so we can sign you in. Weather-based prediction is turned off in mainland China, so no location data leaves your device.</p>
-<h2 id="11-childrens-privacy">11. Children's Privacy</h2>
-<p>EverlyCare is intended for adult caregivers and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-<h2 id="12-your-rights">12. Your Rights</h2>
-<p>You have the right to:</p>
-<ul>
-<li>Access your personal data</li>
-<li>Correct inaccurate data</li>
-<li>Delete your account and data (self-service, in the app — see Section 9)</li>
-<li>Export your care logs (via PDF report)</li>
-<li>Withdraw consent at any time</li>
-<li>View your consent history</li>
-</ul>
-<h2 id="13-changes-to-this-policy">13. Changes to This Policy</h2>
-<p>We may update this privacy policy from time to time. Any changes will be posted within the app and on this page with an updated effective date. For material changes, we will ask you to review and accept the updated policy in the app.</p>
-<h2 id="14-contact-us">14. Contact Us</h2>
-<p>If you have questions about this privacy policy or your data, please contact:</p>
-<p><strong>EverlyCare Team</strong> Email: <a href="mailto:everlycarecore@googlegroups.com">everlycarecore@googlegroups.com</a></p>
-<h1 id="everlycare-隐私政策">EverlyCare 隐私政策</h1>
-<p><strong>生效日期:2026 年 7 月 15 日</strong>(取代 2026 年 7 月 8 日版本)</p>
-<p>EverlyCare(下称"我们"或"本应用")由 Mingchi Zhang 开发。本隐私政策说明当您使用 EverlyCare 移动应用时,我们如何收集、使用和保护您的个人信息。本政策提供英文与中文两个版本,两版本内容一致;如有歧义,以英文版本为准。</p>
-<h2 id="1-我们收集的信息">1. 我们收集的信息</h2>
-<p>我们收集以下类型的信息:</p>
-<ul>
-<li><strong>账号信息</strong>:您创建和使用账号时的电子邮箱、显示名称、语言偏好,以及可选的头像照片。</li>
-<li><strong>被照护者信息</strong>:您录入的关于被照护者的信息 —— 姓名、出生日期、性别、您与其的关系、病史、过敏史、护理备注、可选的头像照片,以及护理习惯设置(如日常睡眠时段、快捷饮水量偏好)。</li>
-<li><strong>护理日志</strong>:您录入的每日护理记录,包括:
-<ul>
-<li>如厕记录(计划/自主如厕、失禁情况、尿量、坐便时长、外出模式);</li>
-<li>排便记录(类型、Bristol 大便量表评分、量、是否事故、地点);</li>
-<li>进食与饮水记录(餐别、描述、饮水量毫升数、食欲);</li>
-<li>用药记录(药名、剂量、已服/漏服/跳过)及用药时间表;</li>
-<li>情绪与行为观察(含睡眠质量备注);</li>
-<li>卫生记录(洗浴、更衣、皮肤状况、口腔护理);</li>
-<li>活动记录与自由笔记;</li>
-<li>您配置的提醒日程。</li>
-</ul></li>
-<li><strong>同意记录</strong>:当您在注册时同意本政策,以及在创建被照护者档案时确认代理同意时,我们会保存该同意事件的审计记录(谁、何时、哪种同意、对应的政策版本)。该记录仅可追加,不可修改。</li>
-<li><strong>位置数据(可选)</strong>:若您启用天气感知预测功能并授予定位权限,应用会读取设备的大致坐标以获取当地天气(见第 4 条)。若您拒绝该权限,该功能将被跳过。</li>
-<li><strong>设备信息</strong>:设备类型、操作系统版本和语言偏好,仅用于实现应用功能。</li>
-</ul>
-<h2 id="2-我们如何使用您的信息">2. 我们如何使用您的信息</h2>
-<ul>
-<li>提供并维护应用的照护功能</li>
-<li>生成供您个人照护使用的护理洞察、趋势分析和基于模式的预测(如可能的如厕时间窗)—— 见第 6 条</li>
-<li>发送您配置的本地通知提醒</li>
-<li>支持您邀请家人组成照护团队协作</li>
-<li>生成 PDF 护理报告,便于与医护人员共享</li>
-<li>计算内部的<strong>去标识聚合使用统计</strong>(例如某周有多少家庭在记录),用于改进产品。该统计不对外共享,也不接入任何第三方分析 SDK。</li>
-</ul>
-<h2 id="3-数据存储与安全">3. 数据存储与安全</h2>
-<p>您的数据安全地存储于 Supabase(具备企业级安全能力的云数据库服务)。所有数据均通过 HTTPS 加密传输。行级安全策略(RLS)确保只有您和您邀请的照护团队成员可以访问您的护理数据。</p>
+<ul><li>Supabase (database, authentication, and hosting infrastructure): processes and stores the data described in Section 1 on our behalf.</li><li>Open-Meteo (weather service, optional): if you grant location permission, your device sends its approximate coordinates directly to the Open-Meteo weather API to retrieve local temperature and humidity, which the app uses to refine toileting predictions. No account information, name, or care data is sent with this request, and the result is cached on your device. If you never grant location permission, no data is ever sent to Open-Meteo.</li></ul>
+<p>No other third party receives your data.</p></section>
+<section><h2>5. Health Data</h2><p>EverlyCare collects health-related information about care recipients (medication, toileting and bowel habits, fluid intake, mood, hygiene, etc.). This data is treated with the highest level of sensitivity. Apart from Supabase acting as our hosting infrastructure, we do not disclose health data to any third party, and it is only accessible to authenticated users with explicit access.</p>
+<p>Apple Health (HealthKit) — iOS, optional. With your explicit permission, EverlyCare can read (never write) two data types from the Apple Health app — sleep analysis and step count — to improve toileting predictions. This feature is off by default; when enabling it you choose which single care recipient this device's health data belongs to, and the data informs predictions for that person only. Raw health samples never leave your device — the app uploads only derived results (each night's sleep onset/wake time and daily step totals), protected by the same access controls as your care logs. If you use China data-residency mode, these derived results also stay on your device and are never uploaded. This data is never used for advertising, never sold or shared with any third party, and never used for any purpose prohibited by Apple's HealthKit guidelines. You can turn reading off at any time in Settings → Health Data, effective immediately; stored derived results are deleted when you delete your account (in China data-residency mode they are on-device only and are removed when you uninstall the app, as described in Sections 3 and 10). Predictions do not depend on health data — declining or disabling access does not affect any existing feature.</p></section>
+<section><h2>6. Pattern Insights and Predictions</h2><p>The app analyzes the care logs you enter to surface patterns — for example, typical toileting intervals, hydration trends, or likely upcoming toileting windows (optionally adjusted for the care recipient's sleep window and local weather). These insights are wellness and caregiving aids intended to help you plan daily care. They are not medical advice, diagnosis, or treatment, and should never replace the judgment of a qualified healthcare professional. Predictions are computed within the app for your care team's use; prediction accuracy is evaluated locally on your device.</p></section>
+<section><h2>7. Consent and Proxy Consent</h2><ul><li>Your consent: Creating an account requires you to read and accept this privacy policy. You may withdraw consent at any time by stopping use of the app and/or deleting your account (Section 9).</li><li>Proxy consent: When you create a care recipient profile, you confirm that you are entitled to record care and health information on behalf of that person — for example, as their family caregiver where the person may lack the capacity to consent themselves. You must not enter information about a person you are not entitled to record for. If a care recipient (or their legal representative) objects, the responsible caregiver should delete the relevant data.</li><li>Consent records: Each of these consent events is stored as a versioned, append-only audit record so that both you and we can verify what was agreed and when. You can view your own consent history data via your account; these records are deleted together with your account.</li></ul></section>
+<section><h2>8. Push Notifications</h2><p>Reminders (toileting, medication, fluids, custom) are delivered as local notifications scheduled on your device. We do not use remote push services and do not collect push tokens. Notification content is generated on your device from the reminders you configured. You can disable notifications at any time in your device settings or in the app.</p></section>
+<section><h2>9. Data Retention and Deletion</h2><p>Retention. Your data is retained for as long as your account is active. Local caches (weather, prediction records) remain only on your device and are removed when you uninstall the app.</p>
+<p>Deleting individual records. You can edit or delete individual care logs you created at any time in the app.</p>
+<p>Deleting your account. You can delete your account yourself at any time in the app (Settings → Delete Account). Deletion takes effect immediately and works as follows:</p>
+<ul><li>Care recipient profiles that you created and that no other accepted care team member shares with you are permanently deleted, together with all of their care logs, reminders, and medication records.</li><li>Care recipient profiles that are shared with other accepted care team members are retained, because they contain the shared family record of that person's care. In that case, care logs you authored are retained for the remaining care team, but your authorship is removed (the logs are no longer linked to you), and the profile is no longer linked to your account.</li><li>Your account, profile, care team memberships, and consent records are permanently deleted.</li></ul>
+<p>If you have questions about deletion, or wish to request removal of data in a shared care record, contact us at the address in Section 14.</p></section>
+<section><h2>10. International Data Transfer</h2><p>Your data is hosted on Supabase cloud infrastructure, which may be located outside your country of residence (including in the United States). By using the app, you acknowledge that your information will be processed on this infrastructure, protected by the measures described in Section 3. If you use the app in mainland China, your care data — including all health-related information (logs, medications, and care-recipient profiles and conditions), care-team data, and consent records — is stored only on your device and is not transferred outside mainland China. Only account-level information (your email and display name) is processed on the cloud infrastructure above so we can sign you in. Weather-based prediction is turned off in mainland China, so no location data leaves your device.</p></section>
+<section><h2>11. Children's Privacy</h2><p>EverlyCare is intended for adult caregivers and is not directed at children under 13. We do not knowingly collect personal information from children.</p></section>
+<section><h2>12. Your Rights</h2><p>You have the right to:</p>
+<ul><li>Access your personal data</li><li>Correct inaccurate data</li><li>Delete your account and data (self-service, in the app — see Section 9)</li><li>Export your care logs (via PDF report)</li><li>Withdraw consent at any time</li><li>View your consent history</li></ul></section>
+<section><h2>13. Changes to This Policy</h2><p>We may update this privacy policy from time to time. Any changes will be posted within the app and on this page with an updated effective date. For material changes, we will ask you to review and accept the updated policy in the app.</p></section>
+<section><h2>14. Contact Us</h2><p>If you have questions about this privacy policy or your data, please contact:</p>
+<p>EverlyCare Team<br>Email: everlycarecore@googlegroups.com</p></section></div>
+  <hr class="divider">
+  <div id="zh"><h1>EverlyCare 隐私政策</h1>
+<p class="eff">生效日期:2026 年 7 月 17 日(取代 2026 年 7 月 15 日版本)</p>
+<p class="intro">EverlyCare(下称"我们"或"本应用")由 Mingchi Zhang 开发。本隐私政策说明当您使用 EverlyCare 移动应用时,我们如何收集、使用和保护您的个人信息。本政策提供英文与中文两个版本,两版本内容一致;如有歧义,以英文版本为准。</p>
+<section><h2>1. 我们收集的信息</h2><p>我们收集以下类型的信息:</p>
+<ul><li>账号信息:您创建和使用账号时的电子邮箱、显示名称、语言偏好,以及可选的头像照片。</li><li>被照护者信息:您录入的关于被照护者的信息 —— 姓名、出生日期、性别、您与其的关系、病史、过敏史、护理备注、可选的头像照片,以及护理习惯设置(如日常睡眠时段、快捷饮水量偏好)。</li><li>护理日志:您录入的每日护理记录,包括:<ul><li>如厕记录(计划/自主如厕、失禁情况、尿量、坐便时长、外出模式);</li><li>排便记录(类型、Bristol 大便量表评分、量、是否事故、地点);</li><li>进食与饮水记录(餐别、描述、饮水量毫升数、食欲);</li><li>用药记录(药名、剂量、已服/漏服/跳过)及用药时间表;</li><li>情绪与行为观察(含睡眠质量备注);</li><li>卫生记录(洗浴、更衣、皮肤状况、口腔护理);</li><li>活动记录与自由笔记;</li><li>您配置的提醒日程。</li></ul></li><li>同意记录:当您在注册时同意本政策,以及在创建被照护者档案时确认代理同意时,我们会保存该同意事件的审计记录(谁、何时、哪种同意、对应的政策版本)。该记录仅可追加,不可修改。</li><li>位置数据(可选):若您启用天气感知预测功能并授予定位权限,应用会读取设备的大致坐标以获取当地天气(见第 4 条)。若您拒绝该权限,该功能将被跳过。</li><li>Apple 健康数据(可选,iOS):若您在设置中开启"健康数据"读取并授予权限,应用会从 Apple 健康 App 只读(绝不写入)睡眠分析与步数两类数据,用于优化如厕预测。原始健康样本不会离开您的设备,仅存储派生结果(见第 5 条)。该功能默认关闭,拒绝授权即跳过。</li><li>设备信息:设备类型、操作系统版本和语言偏好,仅用于实现应用功能。</li></ul></section>
+<section><h2>2. 我们如何使用您的信息</h2><ul><li>提供并维护应用的照护功能</li><li>生成供您个人照护使用的护理洞察、趋势分析和基于模式的预测(如可能的如厕时间窗)—— 见第 6 条</li><li>发送您配置的本地通知提醒</li><li>支持您邀请家人组成照护团队协作</li><li>生成 PDF 护理报告,便于与医护人员共享</li><li>计算内部的去标识聚合使用统计(例如某周有多少家庭在记录),用于改进产品。该统计不对外共享,也不接入任何第三方分析 SDK。</li></ul></section>
+<section><h2>3. 数据存储与安全</h2><p>您的数据安全地存储于 Supabase(具备企业级安全能力的云数据库服务)。所有数据均通过 HTTPS 加密传输。行级安全策略(RLS)确保只有您和您邀请的照护团队成员可以访问您的护理数据。</p>
 <p>部分数据仅存储在您的设备本地:登录会话、短时效的天气缓存,以及用于在设备端评估预测准确率的预测记录。在 iOS 上,若您使用桌面小组件,当日照护摘要与当前预测通过 Apple 受保护的 App Group 容器共享给小组件;小组件上的快捷记录会使用您的登录凭证,将您主动点按的记录写入您自己的账户。</p>
-<p>若您在中国大陆使用本应用,您的护理数据仅保存在您的设备本地,不会上传至上述云基础设施(见第 10 条)。由于该本地数据不会备份至我们的服务器,建议您在更换设备或重装应用前先导出 PDF 报告。</p>
-<h2 id="4-数据共享与第三方服务">4. 数据共享与第三方服务</h2>
-<p>我们<strong>不会</strong>出售或交易您的个人数据,不将其用于广告,也不使用任何第三方分析或崩溃收集 SDK。您的护理数据仅对以下人员可见:</p>
-<ul>
-<li>您(账号持有人)</li>
-<li>您明确邀请的照护团队成员</li>
-</ul>
+<p>若您在中国大陆使用本应用,您的护理数据仅保存在您的设备本地,不会上传至上述云基础设施(见第 10 条)。由于该本地数据不会备份至我们的服务器,建议您在更换设备或重装应用前先导出 PDF 报告。</p></section>
+<section><h2>4. 数据共享与第三方服务</h2><p>我们不会出售或交易您的个人数据,不将其用于广告,也不使用任何第三方分析或崩溃收集 SDK。您的护理数据仅对以下人员可见:</p>
+<ul><li>您(账号持有人)</li><li>您明确邀请的照护团队成员</li></ul>
 <p>应用依赖以下服务提供方:</p>
-<ul>
-<li><strong>Supabase</strong>(数据库、鉴权与托管基础设施):代表我们处理和存储第 1 条所述数据。</li>
-<li><strong>Open-Meteo</strong>(天气服务,可选):若您授予定位权限,您的设备会将大致坐标直接发送至 Open-Meteo 天气 API,以获取当地温湿度,用于优化如厕预测。该请求不附带任何账号信息、姓名或护理数据,结果缓存在您的设备上。若您从未授予定位权限,则不会向 Open-Meteo 发送任何数据。</li>
-</ul>
-<p>除此之外,没有任何第三方会收到您的数据。</p>
-<h2 id="5-健康数据">5. 健康数据</h2>
-<p>EverlyCare 收集与被照护者相关的健康信息(用药、如厕与排便习惯、饮水量、情绪、卫生等)。此类数据以最高敏感级别对待。除作为我们托管基础设施的 Supabase 外,我们不向任何第三方披露健康数据,且仅限拥有明确访问权限的已认证用户访问。</p>
-<h2 id="6-模式洞察与预测">6. 模式洞察与预测</h2>
-<p>应用会分析您录入的护理日志以呈现规律 —— 例如典型如厕间隔、饮水趋势,或即将到来的可能如厕时间窗(可结合被照护者的睡眠时段和当地天气进行调整)。这些洞察是帮助您安排日常照护的<strong>健康生活与照护辅助工具</strong>,<strong>不构成医疗建议、诊断或治疗</strong>,不能替代专业医护人员的判断。预测在应用内计算、供您的照护团队使用;预测准确率在您的设备本地评估。</p>
-<h2 id="7-同意与代理同意">7. 同意与代理同意</h2>
-<ul>
-<li><strong>您的同意</strong>:创建账号需要您阅读并接受本隐私政策。您可以随时通过停止使用应用和/或删除账号(见第 9 条)来撤回同意。</li>
-<li><strong>代理同意</strong>:创建被照护者档案时,您需确认自己有权代表该人记录护理与健康信息 —— 例如,作为其家庭照护者,而该人可能已缺乏自行同意的能力。请勿录入您无权代为记录之人的信息。若被照护者(或其法定代理人)提出异议,负责的照护者应删除相关数据。</li>
-<li><strong>同意记录</strong>:上述每次同意事件都会保存为带版本号、仅可追加的审计记录,以便您和我们都能核实同意的内容与时间。您可以查看自己的同意历史;这些记录会随您的账号一并删除。</li>
-</ul>
-<h2 id="8-推送通知">8. 推送通知</h2>
-<p>提醒(如厕、用药、饮水、自定义)通过<strong>在您设备上调度的本地通知</strong>送达。我们不使用远程推送服务,也不收集推送令牌(push token)。通知内容由您配置的提醒在设备上生成。您可以随时在系统设置或应用内关闭通知。</p>
-<h2 id="9-数据保留与删除">9. 数据保留与删除</h2>
-<p><strong>保留</strong>:您的数据在账号有效期间保留。本地缓存(天气、预测记录)仅存于您的设备,卸载应用即随之清除。</p>
-<p><strong>删除单条记录</strong>:您可以随时在应用内编辑或删除自己创建的护理日志。</p>
-<p><strong>删除账号</strong>:您可以随时在应用内自助删除账号(设置 → 删除账号)。删除立即生效,规则如下:</p>
-<ul>
-<li>由您创建、且<strong>没有其他已接受的照护团队成员</strong>共同照护的被照护者档案,将被永久删除,其全部护理日志、提醒和用药记录一并删除。</li>
-<li>与<strong>其他已接受成员共同照护</strong>的被照护者档案将被保留,因为其中承载的是该家庭共享的照护记录。此时,您撰写的护理日志将为其余照护团队成员保留,但会<strong>移除您的署名关联</strong>(日志不再指向您),该档案也不再与您的账号关联。</li>
-<li>您的账号、个人资料、照护团队成员关系及同意记录将被永久删除。</li>
-</ul>
-<p>如您对删除有疑问,或希望请求移除共享照护记录中的数据,请通过第 14 条的联系方式与我们联系。</p>
-<h2 id="10-数据跨境传输">10. 数据跨境传输</h2>
-<p>您的数据托管于 Supabase 云基础设施,其所在地可能位于您居住国家/地区之外(包括美国)。使用本应用即表示您知悉您的信息将在该基础设施上处理,并受第 3 条所述措施保护。若您在中国大陆使用本应用,您的护理数据——包括全部健康相关信息(记录、用药,以及被照护者档案与病史)、照护团队数据与同意记录——仅存储在您的设备本地,不传输至中国大陆境外。仅账号层信息(您的邮箱与昵称)会在上述云基础设施上处理,以供您登录。在中国大陆,天气预测功能已关闭,不会有任何定位数据离开您的设备。</p>
-<h2 id="11-儿童隐私">11. 儿童隐私</h2>
-<p>EverlyCare 面向成年照护者,不面向 13 岁以下儿童。我们不会有意收集儿童的个人信息。</p>
-<h2 id="12-您的权利">12. 您的权利</h2>
-<p>您有权:</p>
-<ul>
-<li>访问您的个人数据</li>
-<li>更正不准确的数据</li>
-<li>删除您的账号与数据(应用内自助操作,见第 9 条)</li>
-<li>导出您的护理日志(通过 PDF 报告)</li>
-<li>随时撤回同意</li>
-<li>查看您的同意历史</li>
-</ul>
-<h2 id="13-政策变更">13. 政策变更</h2>
-<p>我们可能不时更新本隐私政策。任何变更都会在应用内及本页面公示,并更新生效日期。对于重大变更,我们会在应用内请您重新阅读并确认更新后的政策。</p>
-<h2 id="14-联系我们">14. 联系我们</h2>
-<p>如您对本隐私政策或您的数据有任何疑问,请联系:</p>
-<p><strong>EverlyCare 团队</strong> 邮箱:<a href="mailto:everlycarecore@googlegroups.com">everlycarecore@googlegroups.com</a></p>
-</div></body></html>
+<ul><li>Supabase(数据库、鉴权与托管基础设施):代表我们处理和存储第 1 条所述数据。</li><li>Open-Meteo(天气服务,可选):若您授予定位权限,您的设备会将大致坐标直接发送至 Open-Meteo 天气 API,以获取当地温湿度,用于优化如厕预测。该请求不附带任何账号信息、姓名或护理数据,结果缓存在您的设备上。若您从未授予定位权限,则不会向 Open-Meteo 发送任何数据。</li></ul>
+<p>除此之外,没有任何第三方会收到您的数据。</p></section>
+<section><h2>5. 健康数据</h2><p>EverlyCare 收集与被照护者相关的健康信息(用药、如厕与排便习惯、饮水量、情绪、卫生等)。此类数据以最高敏感级别对待。除作为我们托管基础设施的 Supabase 外,我们不向任何第三方披露健康数据,且仅限拥有明确访问权限的已认证用户访问。</p>
+<p>Apple 健康(HealthKit,iOS,可选):在您明确授权后,EverlyCare 可从 Apple 健康 App 只读(绝不写入)睡眠分析与步数两类数据,用于优化如厕预测。该功能默认关闭;开启时您需指定这台设备的健康数据属于哪一位被照护者,数据仅用于该被照护者的预测。原始健康样本不会离开您的设备 —— 应用仅上传派生结果(每晚的入睡/醒来时间与每日步数合计),并以与护理日志相同的访问控制保护。若您使用中国数据驻留模式,这些派生结果同样仅保存在您的设备本地、绝不上传。此类数据不用于广告,不出售或与任何第三方共享,也绝不用于 Apple HealthKit 指南所禁止的用途。您可随时在"设置 → 健康数据"中关闭读取,关闭后立即停止;已存储的派生结果将在您删除账号时一并删除(在中国数据驻留模式下,派生结果仅存于本机,随卸载应用清除,详见第 3、10 条)。预测功能不依赖健康数据 —— 拒绝或关闭授权不影响任何现有功能。</p></section>
+<section><h2>6. 模式洞察与预测</h2><p>应用会分析您录入的护理日志以呈现规律 —— 例如典型如厕间隔、饮水趋势,或即将到来的可能如厕时间窗(可结合被照护者的睡眠时段和当地天气进行调整)。这些洞察是帮助您安排日常照护的健康生活与照护辅助工具,不构成医疗建议、诊断或治疗,不能替代专业医护人员的判断。预测在应用内计算、供您的照护团队使用;预测准确率在您的设备本地评估。</p></section>
+<section><h2>7. 同意与代理同意</h2><ul><li>您的同意:创建账号需要您阅读并接受本隐私政策。您可以随时通过停止使用应用和/或删除账号(见第 9 条)来撤回同意。</li><li>代理同意:创建被照护者档案时,您需确认自己有权代表该人记录护理与健康信息 —— 例如,作为其家庭照护者,而该人可能已缺乏自行同意的能力。请勿录入您无权代为记录之人的信息。若被照护者(或其法定代理人)提出异议,负责的照护者应删除相关数据。</li><li>同意记录:上述每次同意事件都会保存为带版本号、仅可追加的审计记录,以便您和我们都能核实同意的内容与时间。您可以查看自己的同意历史;这些记录会随您的账号一并删除。</li></ul></section>
+<section><h2>8. 推送通知</h2><p>提醒(如厕、用药、饮水、自定义)通过在您设备上调度的本地通知送达。我们不使用远程推送服务,也不收集推送令牌(push token)。通知内容由您配置的提醒在设备上生成。您可以随时在系统设置或应用内关闭通知。</p></section>
+<section><h2>9. 数据保留与删除</h2><p>保留:您的数据在账号有效期间保留。本地缓存(天气、预测记录)仅存于您的设备,卸载应用即随之清除。</p>
+<p>删除单条记录:您可以随时在应用内编辑或删除自己创建的护理日志。</p>
+<p>删除账号:您可以随时在应用内自助删除账号(设置 → 删除账号)。删除立即生效,规则如下:</p>
+<ul><li>由您创建、且没有其他已接受的照护团队成员共同照护的被照护者档案,将被永久删除,其全部护理日志、提醒和用药记录一并删除。</li><li>与其他已接受成员共同照护的被照护者档案将被保留,因为其中承载的是该家庭共享的照护记录。此时,您撰写的护理日志将为其余照护团队成员保留,但会移除您的署名关联(日志不再指向您),该档案也不再与您的账号关联。</li><li>您的账号、个人资料、照护团队成员关系及同意记录将被永久删除。</li></ul>
+<p>如您对删除有疑问,或希望请求移除共享照护记录中的数据,请通过第 14 条的联系方式与我们联系。</p></section>
+<section><h2>10. 数据跨境传输</h2><p>您的数据托管于 Supabase 云基础设施,其所在地可能位于您居住国家/地区之外(包括美国)。使用本应用即表示您知悉您的信息将在该基础设施上处理,并受第 3 条所述措施保护。若您在中国大陆使用本应用,您的护理数据——包括全部健康相关信息(记录、用药,以及被照护者档案与病史)、照护团队数据与同意记录——仅存储在您的设备本地,不传输至中国大陆境外。仅账号层信息(您的邮箱与昵称)会在上述云基础设施上处理,以供您登录。在中国大陆,天气预测功能已关闭,不会有任何定位数据离开您的设备。</p></section>
+<section><h2>11. 儿童隐私</h2><p>EverlyCare 面向成年照护者,不面向 13 岁以下儿童。我们不会有意收集儿童的个人信息。</p></section>
+<section><h2>12. 您的权利</h2><p>您有权:</p>
+<ul><li>访问您的个人数据</li><li>更正不准确的数据</li><li>删除您的账号与数据(应用内自助操作,见第 9 条)</li><li>导出您的护理日志(通过 PDF 报告)</li><li>随时撤回同意</li><li>查看您的同意历史</li></ul></section>
+<section><h2>13. 政策变更</h2><p>我们可能不时更新本隐私政策。任何变更都会在应用内及本页面公示,并更新生效日期。对于重大变更,我们会在应用内请您重新阅读并确认更新后的政策。</p></section>
+<section><h2>14. 联系我们</h2><p>如您对本隐私政策或您的数据有任何疑问,请联系:</p>
+<p>EverlyCare 团队<br>邮箱:everlycarecore@googlegroups.com</p></section></div>
+  <footer>EverlyCare · Privacy Policy v2026-07-17 · everlycarecore@googlegroups.com</footer>
+</div>
+</body>
+</html>
